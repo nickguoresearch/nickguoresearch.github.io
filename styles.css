@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.profile-image {
+    border-radius: 25%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 200px;
+    height: 200px;
+}
+
+.bio {
+    text-align: center;
+    max-width: 600px;
+}
+
+.bio h2 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.api-section {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+button {
+    background-color: #ffe254;
+    color: black;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #FFD700;
+}
+
+#quote-text {
+    margin-top: 1rem;
+    padding: 1rem;
+    font-style: italic;
+    white-space: pre-line;
+    line-height: 1.8;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Dark mode styles */
+.light-mode {
+    --bg-color: white;
+    --text-color: #333333;
+    --header-bg: #2c3e50;
+    --table-bg: white;
+}
+
+.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --header-bg: #1a1a1a;
+    --table-bg: #2c2c2c;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+header {
+    background-color: var(--header-bg);
+    transition: background-color 0.3s ease;
+}
+
+/* Table styles */
+.table-container {
+    margin-top: 2rem;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--table-bg);
+    margin-top: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+table.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--header-bg);
+    color: white;
+}
+
+/* Interactive elements */
+.interactive {
+    transform: scale(1);
+    transition: transform 0.2s ease;
+}
+
+.interactive.active {
+    transform: scale(1.1);
+}
+
+/* Theme toggle button */
+.theme-button {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 1rem;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: var(--header-bg);
+    color: white;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.theme-button:hover {
+    transform: scale(1.1);
+    background-color: white;
+    color: black;
+}
+
+/* Hide table initially */
+.hidden {
+    display: none;
+}

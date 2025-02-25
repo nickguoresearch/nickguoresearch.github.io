@@ -1,1 +1,82 @@
-hello world
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio showcasing my work and Nobel Prize API integration">
+    <meta name="author" content="Cornell CS Student">
+    <!-- Open Graph Meta Tags for link preview -->
+    <meta property="og:title" content="My Portfolio - Cornell CS">
+    <meta property="og:description" content="Personal portfolio showcasing my work and Nobel Prize API integration">
+    <meta property="og:image" content="./profile.png">
+    <meta property="og:url" content="https://nickguoresearch.github.io">
+    
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-HR6700SFYK"></script>
+ <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'G-HR6700SFYK');
+ </script>
+ 
+<body class="light-mode">
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+    </header>
+
+    <main class="container">
+        <section class="profile">
+            <img src="./profile.png" alt="Profile picture" class="profile-image">
+            <article class="bio">
+                <h2>About Me</h2>
+                
+                <p>I'm a Master's student at Cornell University, where I'm pursuing a degree in Computer Science.
+                     I specialize in software development and AI/ML.</p>
+                <br>
+
+                <p>I implemented smooth CSS transitions for the theme toggle button, and added a hover effect to the button. 
+                    When the button is clicked, the theme toggles between light and dark mode (buttons also scale up and down).
+                    I also added a hover effect to the Nobel Prize API button. 
+                    When the button is clicked, the Nobel Prize API is called and the data is displayed in a table (also fades and slides in).
+                    The table's theme is also affected by the light and dark mode.
+                    What I learned: CSS transitions allow a cohesive transition effect across multiple CSS variables that feels natural for the user.
+                </p>
+            </article>
+        </section>
+
+        <section class="api-section">
+            <button id="quote-button" class="interactive">Get Random Nobel Prize Winner</button>
+            <div class="table-container">
+                <table id="nobel-table" class="hidden">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Year</th>
+                            <th>Category</th>
+                            <th>Motivation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="laureate-name"></td>
+                            <td id="laureate-year"></td>
+                            <td id="laureate-category"></td>
+                            <td id="laureate-motivation"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <button id="theme-toggle" class="theme-button interactive">Toggle Dark Mode</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
